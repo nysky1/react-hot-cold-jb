@@ -76,7 +76,7 @@ export default class HotCold extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div> 
                 <div>Your Guess: {this.state.userCurrentGuess}</div>
                 <div hidden>Answer: {this.state.answerToGuess}</div>
                 <div>Iteration: {this.state.guessIteration}</div>
