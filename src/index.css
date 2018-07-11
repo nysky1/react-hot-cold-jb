@@ -1,5 +1,77 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+.mainBox {
+  padding:20px;
+  margin: 0 auto;
+  max-width: 1180px;
+}
+.mainBox.backgroundInverse {
+  color:#2862b7;
+  background:  #fff;  
+  max-width: 700px;
+}
+.mainInnerBox {
+  padding-top:40px;
+  margin: 0 auto;
+  width:480px;
+  text-align: center;
+}
+.mainInnerBox.noTop{
+  padding-top:0px;
+}
+.mainInnerBoxHeader {
+  font-weight: normal;
+  font-size: 36px;
+  margin: 0 auto;
+  text-align: center;
+  margin:.67em 0;
+}
+.mainInnerBoxSubtitle {
+  line-height: 1.6;
+  text-align: center;
+  font-weight: 300;
+}
+
+fieldset {
+  margin:0 auto;
+  border: none;
+  text-align:center;
+}
+fieldset input,fieldset textarea,fieldset button,fieldset a {
+  font-size: 30px;
+  border: solid 1px #dcdcdc;
+  height:auto;
+  width:90%;
+  padding:15px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 3px;
+  background: #fcfcfc;
+  margin: 10px auto 10px ;
+  transition: opacity 0.4s;
+}
+
+.guessOutput {
+  font-size: 26px;
+}
+
+@media only screen and (min-width: 768px) {
+  .mainInnerBox {
+      width: 480px;
+  }
+  #userActivities .mainInnerBox {
+      width: 660px;
+  }
+}
+
+/*iPhone 6/7/8 and Samsung S5 */
+@media only screen and (max-width: 640px) {
+    .mainInnerBox {
+        width:100%;
+    }
+    #frmQuickStart {
+        width:100%;
+    }
+    .divConfirmContent {
+        width:90%;
+    }
 }

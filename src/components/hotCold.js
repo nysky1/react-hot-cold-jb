@@ -18,7 +18,8 @@ export default class HotCold extends React.Component {
                 answerToGuess: undefined, //follow-up - can I call a function during the constructor
                 userCurrentGuess: '',
             }
-        this.winMessage = `You Won!  Click 'New Game' to begin a new game.` //how do we share constants?
+        this.winMessage = `You Won in ____guesses_____ guesses!` //how do we share constants?
+        this.newGameMessage = 'Click New Game to begin a new game.';
     }
     componentDidMount() {
         this.setAnswerToGuess();
@@ -27,7 +28,9 @@ export default class HotCold extends React.Component {
         this.setState({ answerToGuess: Math.floor(Math.random() * 100) })
     }
     setGameOver() { //endGame was reserved
-        this.setState({ gameStatus: this.winMessage, inputDisabled: true })
+        this.setState({ guessOutput: `The number was ${this.state.answerToGuess}. ` + this.winMessage.replace('____guesses_____', this.state.guessIteration), 
+        gameStatus: this.newGameMessage, 
+        inputDisabled: true })
     }
     isSolution(guess) { //follow-up comparing state and paramater
         return (guess == this.state.answerToGuess);
@@ -67,20 +70,19 @@ export default class HotCold extends React.Component {
 
             //set guesses and add to counter
             this.setState({
-                userCurrentGuess: guess,
-                guessHistory: guesses.reverse(),
+                userCurrentGuess: 'Previous Guess: ' + guess,
+                guessHistory: guesses,
                 guessIteration: this.state.guessIteration + 1,
-                guessOutput: feedback
+                guessOutput: `You are ${feedback}`
             })
         }
     }
     render() {
         return (
             <div> 
-                <div>Your Guess: {this.state.userCurrentGuess}</div>
                 <div hidden>Answer: {this.state.answerToGuess}</div>
-                <div>Iteration: {this.state.guessIteration}</div>
-                <div>Feedback: {this.state.guessOutput}</div>
+               
+                <div className="guessOutput">{this.state.guessOutput}</div>
                 <GameStatus gameStatus={this.state.gameStatus} />
                 <GuessInput isDisabled={this.state.inputDisabled} onGuess={guess => this.onGuess(guess)} />
                 <GuessHistory guessHistory={this.state.guessHistory} />

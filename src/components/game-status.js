@@ -1,7 +1,8 @@
 import React from 'react';
 
+import './game-status.css';
 export default function GameStatus(props) {
     return (
-        <div>{props.gameStatus}</div>
+        <div className="gameStatus">{props.gameStatus}</div>
     )
 }

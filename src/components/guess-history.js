@@ -1,4 +1,6 @@
 import React from 'react';
+import './guess-history.css';
+
 //follow up: other funcs need a class?
 export default class GuessHistory extends React.Component {
     constructor(props) {
@@ -11,7 +13,7 @@ export default class GuessHistory extends React.Component {
     }
     render() {
         return (
-            <div>{this.formatGuesses(this.props.guessHistory)}</div>
+            <div className="guessHistory">{this.formatGuesses(this.props.guessHistory)}</div>
         );
     }
 }
