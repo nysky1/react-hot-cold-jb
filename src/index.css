@@ -49,6 +49,12 @@ fieldset input,fieldset textarea,fieldset button,fieldset a {
   margin: 10px auto 10px ;
   transition: opacity 0.4s;
 }
+fieldset button {
+  background:#2862b7;
+  font-size: 20px;
+  padding:5px;
+  color: #fff;
+}
 
 .guessOutput {
   font-size: 26px;

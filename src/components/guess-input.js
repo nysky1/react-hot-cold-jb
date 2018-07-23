@@ -20,7 +20,7 @@ export default class GuessInput extends React.Component {
                     className="text" 
                     ref={input => this.textInput = input} 
                     required />
-                    <button type='submit' name='submit' />
+                    <button type='submit' name='submit'>Submit</button>
                 </form>
             </div>
         )
