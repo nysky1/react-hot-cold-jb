@@ -34,7 +34,7 @@ fieldset {
   margin:0 auto;
   border: none;
   text-align:center;
-}
+} 
 fieldset input,fieldset textarea,fieldset button,fieldset a {
   font-size: 30px;
   border: solid 1px #dcdcdc;
