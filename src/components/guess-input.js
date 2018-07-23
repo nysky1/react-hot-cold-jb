@@ -11,7 +11,16 @@ export default class GuessInput extends React.Component {
         return (
             <div>
                 <form id="formGuess" onSubmit={e => this.onSubmit(e)}>
-                    <input autoFocus disabled={this.props.isDisabled} autoComplete="off" name="guessInput" ref={input => this.textInput = input} required />
+                    <input type="number" 
+                    autoFocus 
+                    disabled={this.props.isDisabled} 
+                    autoComplete="off" 
+                    name="guessInput"
+                    id="guessInput"
+                    className="text" 
+                    ref={input => this.textInput = input} 
+                    required />
+                    <button type='submit' name='submit' />
                 </form>
             </div>
         )
