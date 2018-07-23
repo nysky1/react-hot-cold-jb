@@ -5,3 +5,10 @@ cache:
   - node_modules
 env:
 - CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: aLsOxBdCJ69QR1t18VvS5QwMvnazLfdgtORdOCFELbuUb0P3cNxr+vQG5Ne85v0iZYwQJ4KCN5n1VdhpQ/8ESfM2dIyVH3ki1N3qkucwJuFAa2zeWPbp6QnkRBuOsP7fBiCW89RN6ITlqr+OG+14LUbnbhk9Ygzwy5kFFae1wRW8j0P5OBUWxao5ml116d7/CeIkVT9tl5v16ZKsuAq4qe354+Vb8BRwHZRk+XJIvItV/qEAFlTj+TPkXjY4a81RFfLvy23sDVwO5XQqiJM4et0HtKK5Wh2FmN/iulo/kFQ+HmuWYdgSNeXWwN18rEXjR+dlY3aPuCJh8gjcYiCsCOBSuz7r6d5bJ4u4tSrVkYStL9rlAFPCWMl2kFiD6ixncJge/Vpz7OEimjvQDDbOHmEXV5OKnTpL8zUJsNuRu1aVNs2NQHBX/5NLeKhH+X6puAllldrEfWGbBgFvrLlI572v2K0E/AxOx8ifUJvU5dvhomQ4sxItpIICb6vcOJbH0IISXG3regfp/XU4hJeFP/SEYL2dfW0vNcZvMiClr8B3kg2hrxhBl4dn3qcE0PTY7ATZdCqHom16WYQai7KDIx1nesNZuKvcLz6V4zrC3IS4DZ8vYagw+kZYAIrX24rI+arCxmYOwp25/p6gkWN0CBHxXB9jvjhuLhcsx+4IopA=
+  app: tranquil-shelf-51578
+  on:
+    repo: nysky1/react-hot-cold-jb
