@@ -14,8 +14,7 @@ describe('<GuessInput />', () => {
 
         wrapper.find('input[type="number"]').instance().value = value;
 
-        const button = wrapper.find('button');
-        button.simulate('submit');
+        wrapper.find('form').simulate('submit');
         expect(callback).toHaveBeenCalledWith(value);
     });
     it('Should fire the onGuess callback when the form is submitted', () => {
