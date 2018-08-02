@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "enzyme": "^3.1.0",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
     "react-redux": "^5.0.2",
     "react-scripts": "1.1.4",
-    "react-test-renderer": "^16.0.0"
+    "react-test-renderer": "16.4.2"
   },
   "dependencies": {
-    "enzyme-adapter-react-16": "^1.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "redux": "^4.0.0"

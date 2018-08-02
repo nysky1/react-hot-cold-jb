@@ -1,10 +1,11 @@
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {shallow} from 'enzyme';
 
-import HotCold from './hotCold';
+import {HotCold} from './hotCold';
 
 describe('<HotCold />', () => {
     it('Renders without crashing', () => {
-        shallow(<HotCold />);
+        const dispatch = jest.fn();
+        shallow(<HotCold dispatch={dispatch} />);
     });
 });
